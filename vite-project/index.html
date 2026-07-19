@@ -129,54 +129,16 @@
                 <label for="servico">O quão provavel compartilharia nosso abrigo?</label>
                 <input type="range" id="servico" name="servico" min="1" max="5" aria-valuemin="1" aria-valuemax="5" aria-label="Nota de 1 a 5 para o serviço" />
               </div>
-
-              <fieldset role="group" aria-labelledby="legend-mais-gostou">
-                <legend id="legend-mais-gostou">O que você mais gostou no atendimento?</legend>
-                <div>
-                  <label for="mais_tratamento">Tratamento</label>
-                  <input type="checkbox" name="mais_gostou" value="tratamento" id="mais_tratamento">
-                </div>
-                <div>
-                  <label for="mais_localidade">Localidade</label>
-                  <input type="checkbox" name="mais_gostou" value="localidade" id="mais_localidade">
-                </div>
-                <div>
-                  <label for="mais_tratamento_animais">Tratamento aos animais</label>
-                  <input type="checkbox" name="mais_gostou" value="tratamento_animais" id="mais_tratamento_animais">
-                </div>
-                <div>
-                  <label for="mais_condicao_predio">Condição do predio</label>
-                  <input type="checkbox" name="mais_gostou" value="condicao_predio" id="mais_condicao_predio">
-                </div>
-                <div>
-                  <label for="mais_informacoes">Informações</label>
-                  <input type="checkbox" name="mais_gostou" value="informacoes" id="mais_informacoes">
-                </div>
-              </fieldset>
-
-              <fieldset role="group" aria-labelledby="legend-menos-gostou">
-                <legend id="legend-menos-gostou">O que menos gostou no atendimento?</legend>
-                <div>
-                  <label for="menos_tratamento">Tratamento</label>
-                  <input type="checkbox" name="menos_gostou" value="tratamento" id="menos_tratamento">
-                </div>
-                <div>
-                  <label for="menos_localidade">Localidade</label>
-                  <input type="checkbox" name="menos_gostou" value="localidade" id="menos_localidade">
-                </div>
-                <div>
-                  <label for="menos_tratamento_animais">Tratamento aos animais</label>
-                  <input type="checkbox" name="menos_gostou" value="tratamento_animais" id="menos_tratamento_animais">
-                </div>
-                <div>
-                  <label for="menos_condicao_predio">Condição do predio</label>
-                  <input type="checkbox" name="menos_gostou" value="condicao_predio" id="menos_condicao_predio">
-                </div>
-                <div>
-                  <label for="menos_informacoes">Informações</label>
-                  <input type="checkbox" name="menos_gostou" value="informacoes" id="menos_informacoes">
-                </div>
-              </fieldset>
+              
+                <fieldset role="group" aria-labelledby="legend-mais-gostou">
+                  <legend id="legend-mais-gostou">O que você mais gostou no atendimento?</legend>
+                  <div id="checkboxes-mais-gostou"></div>
+                </fieldset>
+                
+                <fieldset>
+                  <legend id="legend-menos-gostou">O que menos gostou no atendimento?</legend>
+                  <div id="checkboxes-menos-gostou"></div>
+                </fieldset>
 
               <div>
                 <label for="feedback">Nos dê um feedback</label>
