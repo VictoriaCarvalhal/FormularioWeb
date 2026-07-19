@@ -1,3 +1,3 @@
-import formHTML from './templates/formulario.html?raw'
+import './css/style.css'
 
-document.querySelector('#app').innerHTML = formHTML
+// Lógica de validação do formulário será adicionada aqui
