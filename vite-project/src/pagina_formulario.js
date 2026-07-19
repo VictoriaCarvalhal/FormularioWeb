@@ -1,30 +1,26 @@
-
-
-const opecoesAvaliacao = [
+// Arrays de dados para os checkboxes de avaliação
+const opcoesAvaliacao = [
     { value: 'tratamento', label: 'Tratamento'},
     { value: 'localidade', label: 'Localidade'},
     { value: 'tratamento_animais', label:'Tratamento aos animais'},
     { value: 'condicao_predio', label:'Condição do predio'},
-    { valeu: 'informacoes' , label:'Informações'}
-]
+    { value: 'informacoes', label:'Informações'}
+];
 
-function gerarCheckboxes(opcoes,name){
-    let html = '';
-
-    opcoes.forEach(opcao => {
-        html += `
-            <div>
-                <label for="${name}_${opcao.value}">${opcao.label}</label>
-                <input type="" name="${name}" value="${opcao.value}" id ="${name}_${opcao.value}">
-            </div>
-        `;
-    });
-
-    return html;
+// Função auxiliar para criar checkboxes repetitivos
+function gerarCheckboxes(opcoes, name) {
+    return opcoes.map(opcao => `
+        <div>
+            <label for="${name}_${opcao.value}">${opcao.label}</label>
+            <input type="checkbox" name="${name}" value="${opcao.value}" id="${name}_${opcao.value}">
+        </div>
+    `).join('');
 }
 
-const containerMais = document.getElementById('container-mais-gostou');
-const containerMenos = document.getElementById('cointer-menos-gostou');
+// Injetando checkboxes de avaliação
+const containerMais = document.getElementById('checkboxes-mais-gostou');
+const containerMenos = document.getElementById('checkboxes-menos-gostou');
 
-containerMais.innerHTML = gerarCheckeboxes(opecoesAvalaioacao, 'mais_gostou');
+containerMais.innerHTML = gerarCheckboxes(opcoesAvaliacao, 'mais_gostou');
 containerMenos.innerHTML = gerarCheckboxes(opcoesAvaliacao, 'menos_gostou');
+
