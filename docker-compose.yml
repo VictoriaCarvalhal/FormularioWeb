@@ -1,0 +1,16 @@
+name: fw
+
+services: 
+  app:
+    image: fw-image
+    container_name: fw-container
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./vite-project:/app 
+      - fw-volume:/app/node_modules
+
+volumes: 
+  fw-volume:
+    name: fw-volume
