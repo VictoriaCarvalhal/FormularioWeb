@@ -1,4 +1,4 @@
-// Arrays de dados para os checkboxes de avaliação
+
 const opcoesAvaliacao = [
     { value: 'tratamento', label: 'Tratamento'},
     { value: 'localidade', label: 'Localidade'},
@@ -7,7 +7,7 @@ const opcoesAvaliacao = [
     { value: 'informacoes', label:'Informações'}
 ];
 
-// Função auxiliar para criar checkboxes repetitivos
+
 function gerarCheckboxes(opcoes, name) {
     return opcoes.map(opcao => `
         <div>
@@ -17,7 +17,6 @@ function gerarCheckboxes(opcoes, name) {
     `).join('');
 }
 
-// Injetando checkboxes de avaliação
 const containerMais = document.getElementById('checkboxes-mais-gostou');
 const containerMenos = document.getElementById('checkboxes-menos-gostou');
 
