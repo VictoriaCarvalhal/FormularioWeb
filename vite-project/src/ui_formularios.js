@@ -23,3 +23,17 @@ const containerMenos = document.getElementById('checkboxes-menos-gostou');
 containerMais.innerHTML = gerarCheckboxes(opcoesAvaliacao, 'mais_gostou');
 containerMenos.innerHTML = gerarCheckboxes(opcoesAvaliacao, 'menos_gostou');
 
+// Mostrar/esconder campo de valor de doação conforme o radio selecionado
+const radiosDoacao = document.querySelectorAll('input[name="doacao"]');
+const containerValorDoacao = document.getElementById('container-valor-doacao');
+
+radiosDoacao.forEach(radio => {
+    radio.addEventListener('change', () => {
+        if (radio.value === 'sim') {
+            containerValorDoacao.style.display = '';
+        } else {
+            containerValorDoacao.style.display = 'none';
+            document.getElementById('valor_doacao').value = '';
+        }
+    });
+});
