@@ -57,8 +57,7 @@
               <div>
                 <label for="data_de_nascimento">Data de Nascimento</label>
                 <input type="date" id="data_de_nascimento" name="data_de_nascimento" autocomplete="bday"
-                  aria-required="true" aria-describedby="error_data_de_nascimento">
-                <small id="error_data_de_nascimento" class="mensagem-erro"></small>
+                  aria-required="true">
               </div>
 
               <div>
@@ -70,14 +69,12 @@
 
               <div>
                 <label for="genero">Gênero</label>
-                <select id="genero" name="genero" autocomplete="sex" aria-required="true"
-                  aria-describedby="error_genero">
+                <select id="genero" name="genero" autocomplete="sex" aria-required="true">
                   <option value=""></option>
                   <option value="masculino">Masculino</option>
                   <option value="feminino">Feminino</option>
                   <option value="prefiro_nao_dizer">Prefiro não dizer</option>
                 </select>
-                <small id="error_genero" class="mensagem-erro"></small>
               </div>
 
               <div>
@@ -91,8 +88,9 @@
               <div>
                 <label for="rede_social">Perfil de rede social pessoal</label>
                 <input type="url" id="rede_social" name="rede_social" autocomplete="url" placeholder="https://"
-                  aria-describedby="rede_social-dica">
-                <small id="rede_social-dica">Opcional — link do seu perfil</small>
+                  aria-describedby="rede_social-dica error_rede_social">
+                <small id="rede_social-dica">Link do seu perfil</small>
+                <small id="error_rede_social" class="mensagem-erro"></small>
               </div>
 
             </div>
@@ -106,22 +104,22 @@
             <div>
               <label for="pesquisa">Pesquise o pet no nosso banco de dados</label>
               <input type="search" id="pesquisa" name="pesquisa" autocomplete="off"
-                aria-label="Pesquisar pet pelo nome ou código" placeholder="Nome ou código do pet">
+                aria-label="Pesquisar pet pelo nome ou código" placeholder="Nome ou código do pet"
+                aria-describedby="error_pesquisa">
+              <small id="error_pesquisa" class="mensagem-erro"></small>
             </div>
 
             <div>
               <label for="especie">Especie do pet</label>
-              <select id="especie" name="especie" autocomplete="off" aria-required="true"
-                aria-describedby="error_especie">
+              <select id="especie" name="especie" autocomplete="off" aria-required="true">
                 <option value=""></option>
                 <option value="cachorro">Cachorro</option>
                 <option value="gato">Gato</option>
               </select>
-              <small id="error_especie" class="mensagem-erro"></small>
             </div>
 
             <div>
-              <label for="nome_pet">Nome do pet (O nome dado pelo abrigo para identificar o animal)</label>
+              <label for="nome_pet">Nome ou codigo do pet</label>
               <input type="text" id="nome_pet" name="nome_pet" autocomplete="off" aria-required="true"
                 aria-describedby="error_nome_pet">
               <small id="error_nome_pet" class="mensagem-erro"></small>
@@ -141,14 +139,13 @@
             <div>
               <label for="data_horario_busca">Dia e horario principal</label>
               <input type="datetime-local" id="data_horario_busca" name="data_horario_busca" autocomplete="off"
-                aria-required="true" aria-describedby="error_data_horario_busca">
-              <small id="error_data_horario_busca" class="mensagem-erro"></small>
+                aria-required="true">
             </div>
 
             <div>
               <label for="horario">Horario secundario</label>
               <input type="time" id="horario" name="horario" autocomplete="off" aria-describedby="horario-dica">
-              <small id="horario-dica">Opcional — caso o horário principal não esteja disponível</small>
+              <small id="horario-dica">Caso o horário principal não esteja disponível</small>
             </div>
 
           </fieldset>
@@ -199,9 +196,8 @@
               <div>
                 <label for="valor_doacao">Valor de doacão</label>
                 <input type="number" id="valor_doacao" name="valor_doacao" min="0" step="0.01"
-                  aria-describedby="valor-dica error_valor_doacao" placeholder="0.00">
+                  aria-describedby="valor-dica" placeholder="0.00">
                 <small id="valor-dica">Valor em reais (R$)</small>
-                <small id="error_valor_doacao" class="mensagem-erro"></small>
               </div>
 
             </div>
@@ -218,8 +214,10 @@
   </div>
 
   <script type="module" src="/src/ui_formularios.js"></script>
-  
+
   <script type="module" src="/src/validacao_formularios.js"></script>
+
+  <script type="module" src="/src/validacao_obrigatorio.js"></script>
 
 </body>
 
