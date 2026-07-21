@@ -1,12 +1,12 @@
 let senha = document.getElementById('senha');
 let error_senha = document.getElementById('error_senha')
 senha.onblur = function () {
-    if ((senha.value.length > 8)) {
+    if ((senha.value.length < 8)) {
         this.classList.add('invalid');
-        error_senha.innerHTML = "Senha invalida! Maior que 8 characteres"
+        error_senha.innerHTML = "Senha invalida! Menor que 8 characteres"
     }
     else {
-        if ((senha.value.length <= 8) && (this.classList.contains('invalid'))) {
+        if ((senha.value.length >= 8) && (this.classList.contains('invalid'))) {
             this.classList.remove('invalid');
             error_senha.innerHTML = "";
         }
