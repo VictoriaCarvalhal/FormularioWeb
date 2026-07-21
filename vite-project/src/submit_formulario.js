@@ -1,18 +1,5 @@
 let formElem = document.getElementById("form_adocao_pet");
 
-function formHandler(){
-    let response = await fetch('',{
-        method: 'POST',
-        body: 
-    });
-
-    if(response.ok){
-        let result = await response.formData();
-    }else{
-        alert("HTTP-Error: " + response.status);
-    }
-}
-
 formElem.onsubmit = async (e) => {
     e.preventDefault();
 
