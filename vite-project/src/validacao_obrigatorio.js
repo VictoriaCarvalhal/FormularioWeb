@@ -7,7 +7,7 @@ legends.forEach(legendId => {
         const elements = fieldset.querySelectorAll('input, select, textarea');
 
         elements.forEach(el => {
-            if (el.type !== 'hidden' && el.type !== 'submit' && el.type !== 'button') {
+            if (el.type !== 'hidden' && el.type !== 'submit') {
                 el.required = true;
 
                 el.addEventListener('invalid', function (e) {
